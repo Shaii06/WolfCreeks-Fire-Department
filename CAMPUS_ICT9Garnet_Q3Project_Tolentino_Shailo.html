@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fire Prevention</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+
+<style >
+.h1{
+	text-align: center
+}
+
+body{
+background-image: url(https://freevector-images.s3.amazonaws.com/uploads/vector/preview/40515/vecteezy_background-red_fj0121_generated.jpg);
+    }
+#p1 {background-color: rgba(255, 0, 0, 0.3);} 
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  max-height: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name:fade;
+  animation-duration: 10s;
+}
+
+@keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+#p2{
+background-color: rgba(255, 0, 0, 0.3);
+}
+h1{
+
+	font-family: 'Tilt Warp', cursive;
+}
+
+</style>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" id="p1">
+  <a class="navbar-brand" href="#"><img src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/323106994_1348126869358756_9204824006466758361_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=kCYTrD4g6xIAX-3A8DT&_nc_oc=AQnv_bdFzlx4R21WxO6wpl2Q_JCr9HQYv3OHxDpvysH-eWYZSCS0o_Rkcms8Ay8iEEg&_nc_ht=scontent-lax3-1.xx&oh=00_AfB5IMqG2lyLfySeXcxBXt6JwUaSVteIPPzwQN1Zw3KhCQ&oe=6415F772" width="70" height="70"></a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="index3.html">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="index.html">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="index2.html">Shop</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<div class="container">
+<br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://images.squarespace-cdn.com/content/v1/573f9a23746fb9b513f1bc70/1472846794122-3K8CKIKRKWW1ZPXGC0OI/Wolf+Creek+FS+0164.jpg?format=1500w" style="width:100%">
+  <div class="text">Wolf Creek</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://images.squarespace-cdn.com/content/v1/573f9a23746fb9b513f1bc70/1472846799962-XY9DYYBYC4KCXNNK75BB/Wolf+Creek+FS+0199woLights.jpg" style="width:100%">
+  <div class="text">Wolf Creek</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://images.squarespace-cdn.com/content/v1/573f9a23746fb9b513f1bc70/1472846782264-MDTBUTAABWP3ROPDOREU/Wolf+Creek+FS+0045.jpg" style="width:100%">
+  <div class="text">Wolf Creek</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+<br>
+<br>
+    <div class="container bg-light">
+
+ <br>
+ <h1>Why do we need to prevent fire?</h1>
+ <br>
+    	<p>        Fire prevention is essential for ensuring the safety of individuals and protecting property from damage. It is important to understand that fires can occur at any time, and often they are caused by simple mistakes or negligence. Therefore, it is crucial to take preventive measures to avoid such disasters.One of the most effective ways of preventing fires is by ensuring that all electrical appliances are in good working condition. Electrical faults are one of the leading causes of fires, so it's necessary to check wiring and plugs regularly. Another way to prevent fires is by being cautious when handling flammable substances like gasoline, kerosene, or propane gas. These materials should be stored safely away from heat sources and in well-ventilated areas.Moreover, having smoke detectors installed throughout your home and performing regular fire drills can significantly reduce the risk of fire-related injuries or casualties. In conclusion, taking proactive measures towards fire prevention can save lives and property.</p>
+
+<br>
+<br>
+    </div>
+    <br>
+    <br>
+	<div class="container bg-danger" id="p2">
+	    <table class="table table-hover table-bordered bg-light table-striped " id="p4" style="border-color:black">
+	    	<tr>
+	    		<br>
+	    		<center><h1 class="text-light">Fire Prevention Tips</h1></center>
+	    	</tr>
+	    	<div class="row">
+	    	<tr>
+	    		<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Smoke_detector.JPG/330px-Smoke_detector.JPG" width="200" height="200"></td>
+	    		<td>Fire alarm is an essential device that helps people prevent a fire. It is designed to detect smoke, heat or flames and alert people in the building to evacuate quickly. A fire can cause significant damage to property and can be life-threatening if not detected early. Therefore, installing a fire alarm system in residential and commercial buildings is crucial for the safety of people and their property. A fire alarm system has sensors that detect smoke or heat, which triggers an audible alarm that alerts everyone within the building. The sound of the alarm warns people of the potential danger, allowing them to take necessary action such as calling for help or evacuating immediately. Fire alarms also provide early warning signs that allow firefighters to respond quickly, minimizing damage caused by fires.</td>
+            </tr>
+            <tr>
+	    		<td><img src="https://media.istockphoto.com/id/111857956/photo/womans-hang-pulling-plug-out-of-socket-on-white.jpg?s=612x612&w=0&k=20&c=ToU6Ljv3cgEHbYnOrW5Dx25507IkvsdoBL3UW2zy858=" width="200" height="200"></td>
+	    		<td>Pulling plugs is a simple and effective way to prevent fires. Electrical appliances that are left plugged in can overheat and cause a fire. By pulling the plug, you can eliminate the risk of an electrical fire.It is important to remember that not all electrical devices are created equal. Some appliances, such as refrigerators and freezers, should never be unplugged because they need to run continuously to maintain their temperature. However, other devices like televisions, lamps, and computers can be safely unplugged when not in use.
+            </td>
+            </tr>
+            <tr>
+	    		<td><img src="https://i.insider.com/5cd5c38793a1522d755fc5a6?width=1136&format=jpeg" width="200" height="200"></td>
+	    		<td>Cooking is an essential part of our daily routine, but it can also be dangerous if not done with care. One of the most common causes of house fires is leaving cooking unattended. It only takes a few seconds for a fire to start, and once it does, it can quickly spread throughout your home.Therefore, it's crucial to never leave your cooking unattended. Always stay in the kitchen while cooking and keep an eye on the stove or oven. If you need to leave the room for any reason, turn off the heat source before leaving.</td>
+            </tr>
+            <tr>
+	    		<td><img src="https://www.portland.gov/sites/default/files/styles/max_540w/public/2021/matches_lighters.jpeg?itok=QaqZiDmG" width="200" height="200"></td>
+	    		<td>Match and lighters are not toys but tools that should be handled with care and responsibility. While they may seem harmless, they have the potential to cause serious harm if misused. Matches and lighters are designed to create fire, which can quickly spread and cause injuries or property damage.Parents should educate their children about the dangers of playing with matches and lighters. They should keep them out of reach of young children who may not understand how to use them safely. Adults too must exercise caution when using these tools, especially around flammable materials.</td>
+            </tr>
+	    </table>
+	    <br>
+	    <div class="row">
+	    	
+
+
+
+	    </div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+ <footer class="bg-danger text-center text-white">
+ 	<br>
+
+  </div>
+  </div>
+ 
+  <div class="text-center p-3" style="background-color: rgba(255, 0, 0, 0.3); ">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">STDesigners.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+</div>	
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style >
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51V4ooDuJeL.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://www.dontwasteyourmoney.com/wp-content/uploads/2020/12/thefitlife-triple-latex-core-flex-hose.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/d/d9/Smoke_detector.JPG") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://www.flinnsci.ca/globalassets/flinn-scientific/all-product-images-rgb-jpegs/se3007.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-5 .part-1::before {
+    background: url("https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51xBC4Uv1WL._AC_SS250_.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-6 .part-1::before {
+    background: url("https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41V0EOnIeKL._AC_UF1000,1000_QL80_.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-7 .part-1::before {
+    background: url("http://cdn.shopify.com/s/files/1/0049/3132/1890/collections/fire-vulcan-led_1200x1200.jpg?v=1596555162") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-8 .part-1::before {
+    background: url("https://arborwear.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/2/12-4000-60_fr-4000_cut-resistant.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}	
+
+body{
+background-image: url(https://freevector-images.s3.amazonaws.com/uploads/vector/preview/40515/vecteezy_background-red_fj0121_generated.jpg);
+    }	
+ #p1 {background-color: rgba(255, 0, 0, 0.3);}    
+	</style>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" id="p1">
+  <a class="navbar-brand" href="#"><img src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/323106994_1348126869358756_9204824006466758361_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=kCYTrD4g6xIAX-3A8DT&_nc_oc=AQnv_bdFzlx4R21WxO6wpl2Q_JCr9HQYv3OHxDpvysH-eWYZSCS0o_Rkcms8Ay8iEEg&_nc_ht=scontent-lax3-1.xx&oh=00_AfB5IMqG2lyLfySeXcxBXt6JwUaSVteIPPzwQN1Zw3KhCQ&oe=6415F772" width="70" height="70"></a>
+  
+  <br>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#">Contact us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+
+<section class="section-products">
+		<div class="container text-light">
+				<div class="row justify-content-center text-center">
+						<div class="col-md-8 col-lg-6">
+								<div class="header">
+										<h3 class="text-light">Featured Product</h3>
+										<h2 class="text-light">Popular Products</h2>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-1" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Fire Extinguisher</h3>
+												<h4 class="product-old-price">$89.99</h4>
+												<h4 class="product-price">$49.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-2" class="single-product">
+										<div class="part-1">
+												<span class="discount">15% off</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title"> 3M Water Hose</h3>
+												<h4 class="product-price">$59.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-3" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Fire Detector/alarm</h3>
+												<h4 class="product-old-price">$59.99</h4>
+												<h4 class="product-price">$39.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-4" class="single-product">
+										<div class="part-1">
+												<span class="new">new</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Fire-Safe Blanket</h3>
+												<h4 class="product-price">$39.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-5" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Safety Gas mask</h3>
+												<h4 class="product-old-price">$59.99</h4>
+												<h4 class="product-price">$29.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-6" class="single-product">
+										<div class="part-1">
+												<span class="discount">15% off</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Safety Glasses</h3>
+												<h4 class="product-price">$39.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-7" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">3M Flashlight</h3>
+												<h4 class="product-old-price">$69.99</h4>
+												<h4 class="product-price">$49.99</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-8" class="single-product">
+										<div class="part-1">
+												<span class="new">new</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Safety Gloves</h3>
+												<h4 class="product-price">$29.99</h4>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+	<br>
+ <footer class="bg-danger text-center text-white">
+ 	<br>
+
+  </div>
+  </div>
+ 
+  <div class="text-center p-3" style="background-color: rgba(255, 0, 0, 0.3); ">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">STDesigners.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body>
+</html>
